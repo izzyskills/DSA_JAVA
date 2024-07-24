@@ -54,6 +54,18 @@ public class Main {
 
         // Print the LinkedList
         list.printList();
+        list.deleteByKey(1);
+
+        // Print the LinkedList
+        list.printList();
+
+        // Delete node with value 4
+        // In this case the key is present ***in the
+        // middle***
+        list.deleteByKey(4);
+
+        // Print the LinkedList
+        list.printList();
     }
 
 }
