@@ -35,4 +35,15 @@ public class LinkedList<T> {
         }
 
     }
+
+    public void printList() {
+        Node<T> currNode = head;
+        System.out.print("Linked List: ");
+
+        while (currNode != null) {
+            System.out.print(currNode.data + "--> ");
+            currNode = currNode.next;
+        }
+        System.out.println();
+    }
 }

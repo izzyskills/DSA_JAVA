@@ -34,6 +34,26 @@ public class Main {
         System.out.println("Postorder traversal:");
         tree.postorder();
         System.out.println();
+
+        // Linked List
+        LinkedList<Integer> list = new LinkedList<Integer>();
+
+        //
+        // ******INSERTION******
+        //
+
+        // Insert the values
+        list.insert(1);
+        list.insert(2);
+        list.insert(3);
+        list.insert(4);
+        list.insert(5);
+        list.insert(6);
+        list.insert(7);
+        list.insert(8);
+
+        // Print the LinkedList
+        list.printList();
     }
 
 }
