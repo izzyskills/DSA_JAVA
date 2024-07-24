@@ -85,4 +85,38 @@ public class LinkedList<T> {
             System.out.println(key + " not found");
         }
     }
+
+    public void deleteAtPosition(int index) {
+        Node<T> currNode = head, prev = null;
+        if (index == 0 & currNode != null) {
+            head = head.next;
+            head.prev = null;
+            System.out.println(index + " position element deleted");
+            return;
+        }
+
+        int counter = 0;
+
+        while (currNode != null) {
+            if (index == counter) {
+                prev.next = currNode.next;
+                // If currNode is not the last node, update the next node's prev reference
+                if (currNode.next != null) {
+                    currNode.next.prev = prev;
+                }
+            }
+            else{
+                prev = currNode;
+                currNode = currNode.next;
+                counter++
+            }
+        }
+        if (currNode == null) {
+            // Display the message
+            System.out.println(
+                index + " position element not found");
+        }
+        return;
+
+    }
 }

@@ -66,6 +66,20 @@ public class Main {
 
         // Print the LinkedList
         list.printList();
+
+        // Delete node at position 2
+        // In this case the key is present ***in the
+        // middle***
+        list.deleteAtPosition(2);
+
+        // Print the LinkedList
+        list.printList();
+
+        // Delete node at position 10
+        // In this case the key is ***not present***
+        list.deleteAtPosition(10);
+
+        list.printList();
     }
 
 }
