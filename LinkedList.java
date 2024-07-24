@@ -104,19 +104,46 @@ public class LinkedList<T> {
                 if (currNode.next != null) {
                     currNode.next.prev = prev;
                 }
-            }
-            else{
+            } else {
                 prev = currNode;
                 currNode = currNode.next;
-                counter++
+                counter++;
             }
         }
         if (currNode == null) {
             // Display the message
             System.out.println(
-                index + " position element not found");
+                    index + " position element not found");
         }
         return;
 
     }
+
+    public T findElementBykey(T key) {
+        Node<T> currNode = head;
+
+        if (currNode == null) {
+            // The list is empty
+            System.out.println(key + " not found");
+            return null;
+        } else {
+            // Start the recursive search
+            return findElementByKeyRec(currNode, key);
+        }
+    }
+
+    private T findElementByKeyRec(Node<T> currNode, T key) {
+        // Base case: end of the list
+        if (currNode == null) {
+            System.out.println(key + " not found");
+            return null;
+        }
+        // Base case: key found
+        if (currNode.data.equals(key)) {
+            return currNode.data;
+        }
+        // Recursive case: move to the next node
+        return findElementByKeyRec(currNode.next, key);
+    }
+
 }
