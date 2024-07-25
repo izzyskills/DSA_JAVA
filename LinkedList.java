@@ -146,4 +146,22 @@ public class LinkedList<T> {
         return findElementByKeyRec(currNode.next, key);
     }
 
+    public T findAtPosition(int index) {
+        Node<T> currNode = head;
+        int counter = 0;
+        while (currNode != null) {
+            if (index == counter) {
+                return currNode.data;
+            } else {
+                currNode = currNode.next;
+                counter++;
+            }
+        }
+        if (currNode == null) {
+            System.out.println(
+                    index + " position element not found");
+        }
+        return null;
+
+    }
 }
