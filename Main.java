@@ -80,6 +80,9 @@ public class Main {
         list.deleteAtPosition(10);
 
         list.printList();
+
+        System.err.println(list.findAtPosition(2));
+
     }
 
 }
