@@ -100,4 +100,29 @@ public class MaxHeap {
         removeMax();
     }
 
+    void insertKey(int x) {
+        // To check whether the key
+        // can be inserted or not.
+        if (heapSize == maxSize) {
+            System.out.println("\nOverflow: Could not insertKey\n");
+            return;
+        }
+
+        // The new key is initially
+        // inserted at the end.
+        heapSize++;
+        int i = heapSize - 1;
+        arr[i] = x;
+
+        // The max heap property is checked
+        // and if violation occurs,
+        // it is restored.
+        while (i != 0 && arr[parent(i)] < arr[i]) {
+            int temp = arr[i];
+            arr[i] = arr[parent(i)];
+            arr[parent(i)] = temp;
+            i = parent(i);
+        }
+
+    }
 }

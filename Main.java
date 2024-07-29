@@ -83,6 +83,57 @@ public class Main {
 
         System.err.println(list.findAtPosition(2));
 
+        MaxHeap h = new MaxHeap(15);
+
+        // Asking the user to input the keys:
+        int k, i, n = 6;
+        System.out.println("Entered 6 keys:- 3, 10, 12, 8, 2, 14 \n");
+        h.insertKey(3);
+        h.insertKey(10);
+        h.insertKey(12);
+        h.insertKey(8);
+        h.insertKey(2);
+        h.insertKey(14);
+
+        // Printing the current size
+        // of the heap.
+        System.out.println("The current size of the heap is "
+                + h.curSize() + "\n");
+
+        // Printing the root element which is
+        // actually the maximum element.
+        System.out.println("The current maximum element is " + h.getMax()
+                + "\n");
+
+        // Deleting key at index 2.
+        h.deleteKey(2);
+
+        // Printing the size of the heap
+        // after deletion.
+        System.out.println("The current size of the heap is "
+                + h.curSize() + "\n");
+
+        // Inserting 2 new keys into the heap.
+        h.insertKey(15);
+        h.insertKey(5);
+        System.out.println("The current size of the heap is "
+                + h.curSize() + "\n");
+        System.out.println("The current maximum element is " + h.getMax()
+                + "\n");
+
+        MinHeap h = new MinHeap(11);
+        h.insertKey(3);
+        h.insertKey(2);
+        h.deleteKey(1);
+        h.insertKey(15);
+        h.insertKey(5);
+        h.insertKey(4);
+        h.insertKey(45);
+        System.out.print(h.extractMin() + " ");
+        System.out.print(h.getMin() + " ");
+
+        h.decreaseKey(2, 1);
+        System.out.print(h.getMin());
     }
 
 }
