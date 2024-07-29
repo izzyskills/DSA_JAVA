@@ -80,9 +80,11 @@ public class LinkedList<T> {
 
             // Display the message
             System.out.println(key + " found and deleted");
+            return;
         } else {
             // CASE 3: The key is not present in the list
             System.out.println(key + " not found");
+            return;
         }
     }
 
@@ -104,6 +106,7 @@ public class LinkedList<T> {
                 if (currNode.next != null) {
                     currNode.next.prev = prev;
                 }
+                return;
             } else {
                 prev = currNode;
                 currNode = currNode.next;
@@ -114,8 +117,8 @@ public class LinkedList<T> {
             // Display the message
             System.out.println(
                     index + " position element not found");
+            return;
         }
-        return;
 
     }
 

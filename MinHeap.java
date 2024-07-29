@@ -1,8 +1,5 @@
 package DSA;
 
-// Java program for the above approach 
-import java.util.*;
-
 // A class for Min Heap 
 class MinHeap {
 

@@ -86,7 +86,6 @@ public class Main {
         MaxHeap h = new MaxHeap(15);
 
         // Asking the user to input the keys:
-        int k, i, n = 6;
         System.out.println("Entered 6 keys:- 3, 10, 12, 8, 2, 14 \n");
         h.insertKey(3);
         h.insertKey(10);
@@ -121,19 +120,19 @@ public class Main {
         System.out.println("The current maximum element is " + h.getMax()
                 + "\n");
 
-        MinHeap h = new MinHeap(11);
-        h.insertKey(3);
-        h.insertKey(2);
-        h.deleteKey(1);
-        h.insertKey(15);
-        h.insertKey(5);
-        h.insertKey(4);
-        h.insertKey(45);
-        System.out.print(h.extractMin() + " ");
-        System.out.print(h.getMin() + " ");
+        MinHeap MinH = new MinHeap(11);
+        MinH.insertKey(3);
+        MinH.insertKey(2);
+        MinH.deleteKey(1);
+        MinH.insertKey(15);
+        MinH.insertKey(5);
+        MinH.insertKey(4);
+        MinH.insertKey(45);
+        System.out.print(MinH.extractMin() + " ");
+        System.out.print(MinH.getMin() + " ");
 
-        h.decreaseKey(2, 1);
-        System.out.print(h.getMin());
+        MinH.decreaseKey(2, 1);
+        System.out.print(MinH.getMin());
     }
 
 }
